@@ -1,0 +1,9 @@
+<app-search-input (onSearchTextChange)="searchInputChange($event)" *ngIf="!isLoading"></app-search-input>
+<p>home works!</p>
+<ul>
+  <li *ngFor="let bluePrint of searchResult">
+    <a routerLink="{{'detail/' + bluePrint.id}}" routerLinkActive="active">
+      {{ bluePrint.name }}
+    </a>
+  </li>
+</ul>
